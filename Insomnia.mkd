@@ -1,0 +1,62 @@
+Insomnia intstruktioner:
+
+POST http://localhost:8000/api/account/signup
+
+{
+	"username": "karl",
+	"email": "karl@emil",
+	"password": "karlkarl"
+}
+
+POST http://localhost:8000/api/account/login
+
+{
+	"username": "karl",
+	"password": "karlkarl"
+}
+
+GET http://localhost:8000/api/menu
+
+POST http://localhost:8000/api/menu
+
+api-key 7BTxHCyHhzIME5TI
+
+{
+    "id": 7,
+    "title": "kaffe",
+    "desc": "Bryggd på månadens bönor.",
+    "price": 99
+}
+
+DELETE http://localhost:8000/api/menu
+
+api-key 7BTxHCyHhzIME5TI
+
+{
+	"id": 7
+}
+
+POST http://localhost:8000/api/order
+
+accountId karl4
+
+{
+    "cart": [
+        {
+            "id": 1,
+            "title": "Bryggkaffe",
+			"amount": 4,
+			"price": "39"
+        },
+        {
+            "id": 2,
+			"title": "Caffè Doppio",
+			"amount": 4,
+			"price": "49"
+        }
+    ]
+}
+
+GET http://localhost:8000/api/order/karl4
+
+accountId karl4
